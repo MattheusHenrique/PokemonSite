@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="pt-br">
+    <head>
+        <title>POKEMONS</title>
+        <meta charset="utf-8">
+    </head>
+    {% if pokemons %}
+    {% for pokemon in pokemons %}
+        <div>
+            {% if receita.foto_receita == '' %}
+                <h2>SEM FOTO AFF</h2>
+            {% else %}
+                <img src="{{ pokemon.image_pokemon.url }}" height="30%" width="20%" alt="">
+            {% endif %}
+            <h5>{{ pokemon.name }}</h5>
+            <h5>{{ pokemon.type }}</h5>
+            <h5>{{ pokemon.description }}</h5>
+        </div>
+    {% endfor %}
+    {% endif %}
+    <body>
+    </body>
+</html>
