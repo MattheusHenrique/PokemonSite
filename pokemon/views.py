@@ -11,3 +11,19 @@ def index(request):
         'pokemons': pokemons
     }
     return render(request, 'pokemon/index.html', data)
+
+def search(request):
+    list_pokemons = Pokemon.objects.filter(published=True)
+
+    if 'search' in request.GET:
+        name_search = request.GET['search']
+        if search:
+            list_pokemons = list_pokemons.filter(name__icontains=name_search)
+
+    data = {
+        'pokemons': list_pokemons
+    }
+
+    return render(request, 'pokemon/search.html', data)
+
+

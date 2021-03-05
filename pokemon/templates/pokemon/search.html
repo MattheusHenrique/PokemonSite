@@ -11,10 +11,10 @@
     <body>
         <nav class="navbar navbar-light bg-light">
           <a class="navbar-brand">PokeSite</a>
-            <form class="form-inline" action="{% url 'search' %}">
+          <form class="form-inline" action="{% url 'search' %}">
                 <input class="form-control mr-sm-2" type="search"  name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-           </form>
+          </form>
         </nav>
         <!-- ##### Best Receipe Area Start ##### -->
         <section class="best-receipe-area">
@@ -40,7 +40,7 @@
                     {% endfor %}
                     {% else %}
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <p>Receita não encontrada</p>
+                            <p>Pokemon not found</p>
                         </div>
                     {% endif %}
                 </div>
@@ -49,8 +49,5 @@
         <!-- ##### Best Receipe Area End ##### -->
     </body>
 </html>
-
-
-
 
 
