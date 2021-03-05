@@ -10,7 +10,7 @@
     </head>
     <body>
         <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">PokeSite</a>
+          <a class="navbar-brand" href="{% url 'index' %}">PokeSite</a>
             <form class="form-inline" action="{% url 'search' %}">
                 <input class="form-control mr-sm-2" type="search"  name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
